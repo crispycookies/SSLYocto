@@ -4,13 +4,13 @@ LICENSE = "GPLv3"
 FILESEXTRAPATHS_prepend := "${THISDIR}/files/:"
 
 SRC_URI = "git://github.com/crispycookies/SSLYocto.git;protocol=https;branch=M3_userapplication"
-jklöj
+
 SRCREV = "${AUTOREV}"
 
 SYSTEMD_SERVICE_${PN} = "userspace.service"
 
 DEPENDS = "paho-mqtt3a paho-mqtt3c paho-mqttpp3 fpgaregion pthread"
-RDEPENDS_${PN} = "paho-mqtt-cpp"
+RDEPENDS_${PN} = "paho-mqtt-cpp paho-mqtt3a paho-mqtt3c paho-mqttpp3 fpgaregion pthread"
 
 TARGET_CC_ARCH += "${LDFLAGS}"
 
