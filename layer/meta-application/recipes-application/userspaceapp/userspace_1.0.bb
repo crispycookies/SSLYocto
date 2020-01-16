@@ -29,11 +29,11 @@ do_compile () {
 do_install() {
     # install service file
     install -d ${D}${systemd_unitdir}/system
-    install -c -m 0644 ${WORKDIR}/git/prjYoctoLayers/userspace.service ${D}${systemd_unitdir}/system
+    install -c -m 0644 ${WORKDIR}/git/userspace.service ${D}${systemd_unitdir}/system
 
     # install binary
     install -d ${D}${bindir}
-    install -c -m 0755 ${WORKDIR}/build/MQTTSensorValues ${D}${bindir}/UserspaceApp
+    install -c -m 0755 ${WORKDIR}/build/UserspaceApp ${D}${bindir}/UserspaceApp
 
     # install empty firmware dir if not existing to store fpga bitfile
     install -d -m 0755 ${D}${base_libdir}/firmware
