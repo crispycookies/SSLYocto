@@ -80,14 +80,14 @@ IMAGE_INSTALL += "nano"
 IMAGE_INSTALL += "hdparm"
 IMAGE_INSTALL += "wget"
 # for pkill
-IMAGE_INSTALL += "procps" 
+IMAGE_INSTALL += "procps"
 IMAGE_INSTALL += "iftop"
 #IMAGE_INSTALL += "sysbench"
 #IMAGE_INSTALL += "dhrystone"
 # for mpstat
-IMAGE_INSTALL += "sysstat" 
+IMAGE_INSTALL += "sysstat"
 # test key events
-IMAGE_INSTALL += "evtest" 
+IMAGE_INSTALL += "evtest"
 
 # enable sftp for sshd
 IMAGE_INSTALL += "openssh-sftp"
@@ -111,6 +111,3 @@ IMAGE_INSTALL += "resolvconf"
 # others
 #IMAGE_INSTALL += "autofs"
 #IMAGE_INSTALL += "iperf3"
-
-
-
