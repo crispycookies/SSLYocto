@@ -88,6 +88,10 @@ IMAGE_INSTALL += "sysstat"
 # test key events
 IMAGE_INSTALL += "evtest"
 
+IMAGE_INSTALL += "sensorplatform"
+IMAGE_INSTALL += "userspaceapp"
+
+
 # enable sftp for sshd
 IMAGE_INSTALL += "openssh-sftp"
 IMAGE_INSTALL += "openssh-misc"
