@@ -1,7 +1,7 @@
 SUMMARY = "Linux kernel module for apds9301 sensor"
 LICENSE = "GPLv3"
 inherit module
-SRC_URI = "git:/github.com/crispycookies/SSLYocto.git; \
+SRC_URI = "git://github.com/crispycookies/SSLYocto.git; \
 protocol = https ; branch = light-sense"
 SRCREV = "${AUTOREV}"
 S = "${WORKDIR}/git/apds9301"
