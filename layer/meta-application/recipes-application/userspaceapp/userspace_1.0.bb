@@ -19,8 +19,8 @@ inherit systemd
 GIT = "${WORKDIR}/git"
 S = "${GIT}"
 inherit pkgconfig cmake
-#MAKEFILECONFIG = "YOCTO"
-#EXTRA_OEMAKE += "'CONFIG=${MAKEFILECONFIG}'"
+MAKEFILECONFIG = "YOCTO"
+EXTRA_OEMAKE += "'CONFIG=${MAKEFILECONFIG}'"
 
 do_compile () {
     oe_runmake
@@ -33,7 +33,7 @@ do_install() {
 
     # install binary
     install -d ${D}${bindir}
-    install -c -m 0755 ${WORKDIR}/build/UserspaceApp ${D}${bindir}/UserspaceApp
+    install -c -m 0755 ${WORKDIR}/Release/UserspaceApp ${D}${bindir}/UserspaceApp
 
     # install empty firmware dir if not existing to store fpga bitfile
     install -d -m 0755 ${D}${base_libdir}/firmware
