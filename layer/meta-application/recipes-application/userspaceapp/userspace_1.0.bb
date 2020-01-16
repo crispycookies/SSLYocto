@@ -4,7 +4,7 @@ LICENSE = "GPLv3"
 FILESEXTRAPATHS_prepend := "${THISDIR}/files/:"
 
 SRC_URI = "git://github.com/crispycookies/SSLYocto.git;protocol=https;branch=M3_userapplication"
-
+jklöj
 SRCREV = "${AUTOREV}"
 
 SYSTEMD_SERVICE_${PN} = "userspace.service"
