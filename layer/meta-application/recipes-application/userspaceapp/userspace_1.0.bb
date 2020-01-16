@@ -1,13 +1,13 @@
-DESCRIPTION = "Userspace App daemon"
+DESCRIPTION = "mqttpublisher daemon"
 SECTION = "base"
 LICENSE = "GPLv3"
 FILESEXTRAPATHS_prepend := "${THISDIR}/files/:"
 
-SRC_URI = "git://github.com/crispycookies/SSLYocto.git;branch=M3_userapplication"
+SRC_URI = "git://git@github.com/janeson332/SSL.git;protocol=ssh;branch=master"
 
 SRCREV = "${AUTOREV}"
 
-SYSTEMD_SERVICE_${PN} = "userspace.service"
+SYSTEMD_SERVICE_${PN} = "mqttpublisher.service"
 
 DEPENDS = "paho-mqtt-cpp libfpgaregion"
 RDEPENDS_${PN} = "paho-mqtt-cpp"
@@ -22,9 +22,9 @@ inherit pkgconfig cmake
 #MAKEFILECONFIG = "YOCTO"
 #EXTRA_OEMAKE += "'CONFIG=${MAKEFILECONFIG}'"
 
-do_compile () {
-    oe_runmake
-}
+#do_compile () {
+#    oe_runmake
+#}
 
 do_install() {
     # install service file
