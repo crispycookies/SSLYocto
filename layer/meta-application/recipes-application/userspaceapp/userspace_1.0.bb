@@ -9,8 +9,8 @@ SRCREV = "${AUTOREV}"
 
 SYSTEMD_SERVICE_${PN} = "userspace.service"
 
-DEPENDS = "paho-mqtt3a paho-mqtt3c paho-mqttpp3 fpgaregion pthread"
-RDEPENDS_${PN} = "paho-mqtt-cpp paho-mqtt3a paho-mqtt3c paho-mqttpp3 fpgaregion pthread"
+DEPENDS = "paho-mqtt-cpp libfpgaregion "
+RDEPENDS_${PN} = "paho-mqtt-cpp"
 
 TARGET_CC_ARCH += "${LDFLAGS}"
 
@@ -18,7 +18,7 @@ inherit systemd
 
 GIT = "${WORKDIR}/git"
 S = "${GIT}"
-inherit pkgconfig cmake
+#inherit pkgconfig cmake
 MAKEFILECONFIG = "YOCTO"
 EXTRA_OEMAKE += "'CONFIG=${MAKEFILECONFIG}'"
 
@@ -33,18 +33,18 @@ do_install() {
 
     # install binary
     install -d ${D}${bindir}
-    install -c -m 0755 ${WORKDIR}/Release/UserspaceApp ${D}${bindir}/UserspaceApp
+    install -c -m 0755 ${WORKDIR}/Release/UserspaceApplication ${D}${bindir}/UserspaceApplication
 
     # install empty firmware dir if not existing to store fpga bitfile
     install -d -m 0755 ${D}${base_libdir}/firmware
 
     # install config
-    install -d ${D}${sysconfdir}/UserspaceApp
+    install -d ${D}${sysconfdir}/UserspaceApplication
 }
 
 FILES_${PN} = "${base_libdir}/systemd/system/userspace.service"
-FILES_${PN} += "${bindir}/UserspaceApp"
-FILES_${PN} += "${sysconfdir}/UserspaceApp"
+FILES_${PN} += "${bindir}/UserspaceApplication"
+FILES_${PN} += "${sysconfdir}/UserspaceApplication"
 FILES_${PN} += "${base_libdir}/firmware"
 
 # As this package is tied to systemd, only build it when we're also building systemd.
