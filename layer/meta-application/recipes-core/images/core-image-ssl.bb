@@ -45,6 +45,9 @@ IMAGE_INSTALL += "mpu9250-mod"
 IMAGE_INSTALL += "apds9301-mod"
 IMAGE_INSTALL += "ssg-mod"
 IMAGE_INSTALL += "hdc1000-mod"
+IMAGE_INSTALL += "sensorplatform"
+IMAGE_INSTALL += "userspace"
+
 
 #IMAGE_INSTALL += "managementif"
 IMAGE_INSTALL += "debugservice"
@@ -87,9 +90,6 @@ IMAGE_INSTALL += "iftop"
 IMAGE_INSTALL += "sysstat"
 # test key events
 IMAGE_INSTALL += "evtest"
-
-IMAGE_INSTALL += "sensorplatform"
-#IMAGE_INSTALL += "userspace"
 
 
 # enable sftp for sshd
