@@ -3,7 +3,7 @@ LICENSE = "CLOSED"
 SRC_URI = "git://github.com/crispycookies/SSLHardware.git;protocol=https;branch=master"
 SRCREV = "${AUTOREV}"
 DEPENDS += "dtc-native"
-OUTPUT = "${WORKDIR}"
+OUTPUT = "${WORKDIR}/git/"
 do_configure () {
   dtc -I "dts" -O "dtb" -o ${WORKDIR}/socfpga.dtbo ${OUTPUT}/socfpga.dtso
 }
