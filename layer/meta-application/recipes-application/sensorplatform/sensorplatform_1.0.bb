@@ -12,6 +12,6 @@ do_install () {
   install -d -m 0755 ${D}${base_libdir}/firmware/
   # add rbf and dtso to firmware folder
   install -m 0666 ${OUTPUT}/socfpga.rbf ${D}${base_libdir}/firmware/socfpga.rbf
-  install -m 0666 ${WORKDIR}/socfpga.dtbo ${D} ${base_libdir}/firmware/socfpga.dtbo
+  install -m 0666 ${WORKDIR}/socfpga.dtbo ${D}${base_libdir}/firmware/socfpga.dtbo
 }
 FILES_${PN} = "${base_libdir}/firmware"
