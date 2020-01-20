@@ -45,7 +45,7 @@ IMAGE_INSTALL += "mpu9250-mod"
 IMAGE_INSTALL += "apds9301-mod"
 IMAGE_INSTALL += "ssg-mod"
 IMAGE_INSTALL += "hdc1000-mod"
-#IMAGE_INSTALL += "sensorplatform"
+IMAGE_INSTALL += "sensorplatform"
 IMAGE_INSTALL += "userspace"
 
 
