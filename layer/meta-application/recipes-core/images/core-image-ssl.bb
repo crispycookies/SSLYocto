@@ -89,7 +89,7 @@ IMAGE_INSTALL += "sysstat"
 IMAGE_INSTALL += "evtest"
 
 IMAGE_INSTALL += "sensorplatform"
-IMAGE_INSTALL += "UserspaceApplication"
+IMAGE_INSTALL += "userspace"
 
 
 # enable sftp for sshd
