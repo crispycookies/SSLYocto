@@ -1,5 +1,5 @@
 SUMMARY = "Linux kernel module for Display"
-LICENSE = "GPLv3"
+LICENSE = "CLOSED"
 inherit module
 SRC_URI = "git://github.com/crispycookies/SSLYocto.git;protocol=https;branch=ssg-sense"
 SRCREV = "${AUTOREV}"

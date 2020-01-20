@@ -1,5 +1,5 @@
 SUMMARY = "Linux kernel module for mpu9250 sensor"
-LICENSE = "GPLv3"
+LICENSE = "CLOSED"
 inherit module
 SRC_URI = "git://github.com/crispycookies/SSLYocto.git;protocol=https;branch=mpu"
 SRCREV = "${AUTOREV}"
