@@ -1,5 +1,5 @@
 SUMMARY = "Bitfile to configure FPGA"
-LICENSE = "GPLv3"
+LICENSE = "CLOSED"
 SRC_URI = "git://github.com/crispycookies/SSLHardware.git;protocol=https;branch=master"
 SRCREV = "${AUTOREV}"
 DEPENDS += "dtc-native"
