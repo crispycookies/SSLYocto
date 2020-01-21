@@ -9,7 +9,7 @@ SRCREV = "${AUTOREV}"
 
 SYSTEMD_SERVICE_${PN} = "userspace.service"
 
-DEPENDS = "paho-mqtt-cpp libfpgaregion "
+DEPENDS = "paho-mqtt-cpp libfpgaregion"
 RDEPENDS_${PN} = "paho-mqtt-cpp"
 
 TARGET_CC_ARCH += "${LDFLAGS}"
